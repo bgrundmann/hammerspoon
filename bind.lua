@@ -2,6 +2,7 @@
 -- Modal creation and hotkey binding logic
 
 local execute = require("execute")
+local help = require("help")
 
 local hyper = { "cmd", "alt", "shift", "ctrl" }
 
@@ -50,6 +51,10 @@ end
 -- Bind all actions to hotkeys
 --------------------------------------------------------------------------------
 local function bind(actions)
+    -- Initialize help with actions reference and bind hyper+/ to show help
+    help.init(actions)
+    hs.hotkey.bind(hyper, "/", help.show)
+
     for _, item in ipairs(actions) do
         if item.group then
             -- Create modal for group and bind hyper+key to enter it
