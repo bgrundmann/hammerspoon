@@ -12,6 +12,7 @@
 
 local bind = require("bind")
 local utility = require("utility")
+local window = require("window")
 
 --------------------------------------------------------------------------------
 -- Actions configuration
@@ -26,15 +27,15 @@ local utility = require("utility")
 --   group       = nested actions table -> create modal
 --------------------------------------------------------------------------------
 local actions = {
-    -- Direct app launchers
-    { key = "t", label = "Terminal",      app = "/System/Applications/Utilities/Terminal.app" },
-    { key = "s", label = "Safari",        app = "/Applications/Safari.app" },
-    { key = "e", label = "Editor",        app = "/Applications/Zed.app" },
+    { key = "t", label = "Terminal",      app = "com.apple.Terminal" },
+    { key = "s", label = "Safari",        app = "com.apple.Safari" },
+    { key = "e", label = "Zed",           app = "dev.zed.Zed" },
+    { key = "c", label = "Calendar",      app = "com.apple.iCal" },
 
-    -- URL via command (to open in specific app)
-    { key = "a", label = "LLM Assistant", command = "open -a safari -u 'https://kagi.com/assistant'" },
+    { key = "a", label = "LLM Assistant", url = "https://kagi.com/assistant" },
 
     -- Obsidian vaults
+    -- open via open -a to make sure obsidian also get's activated
     {
         key = "o",
         label = "Obsidian",
@@ -61,12 +62,22 @@ local actions = {
         label = "Communication",
         group = {
             { key = "e", label = "Email",    url = "https://app.fastmail.com" },
-            { key = "m", label = "Messages", app = "/System/Applications/Messages.app" },
-            { key = "s", label = "Signal",   app = "/Applications/Signal.app" },
+            { key = "m", label = "Messages", app = "com.apple.MobileSMS" },
+            { key = "s", label = "Signal",   app = "org.whispersystems.signal-desktop" },
         }
     },
 
-    -- Music controls
+    -- Window management
+    {
+        key = "w",
+        label = "Window management",
+        group = {
+            { key = "v", label = "Vertical split", fun = window.applyVerticalLayout },
+            { key = "m", label = "Maximize",       fun = window.maximize }
+        }
+    },
+
+    -- Music/Media controls
     {
         key = "m",
         label = "Music",
