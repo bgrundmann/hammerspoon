@@ -5,7 +5,7 @@ Leader Key-style hotkey system using hyper (Cmd+Shift+Alt+Ctrl via SuperKey).
 ## File Structure
 
 - `init.lua` - Entry point; defines actions table and calls `bind.bind(actions)`
-- `bind.lua` - Modal creation and hotkey binding logic
+- `bind.lua` - Modal creation and hotkey binding logic. modal is a bit of a misnomer from the end user perspective these are chorded / sequenced key shortcuts.
 - `execute.lua` - Action execution by type
 - `utility.lua` - Helper functions (e.g., app chooser)
 - `window.lua` - window management functions
