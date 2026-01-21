@@ -3,6 +3,7 @@
 
 local execute = require("execute")
 local help = require("help")
+local hint = require("hint")
 
 local hyper = { "cmd", "alt", "shift", "ctrl" }
 
@@ -18,10 +19,13 @@ local function createModal(groupItem)
             timer:stop()
             timer = nil
         end
+        hint.hide()
         modal:exit()
     end
 
     function modal:entered()
+        -- Show hint window with available keys
+        hint.show(groupItem)
         -- Auto-exit after 2 seconds of inactivity
         timer = hs.timer.doAfter(2, exitModal)
     end
@@ -31,6 +35,7 @@ local function createModal(groupItem)
             timer:stop()
             timer = nil
         end
+        hint.hide()
     end
 
     -- Bind escape to exit without action
