@@ -30,7 +30,7 @@ local actions = {
     { key = "t", label = "Terminal",      app = "com.apple.Terminal" },
     { key = "s", label = "Safari",        app = "com.apple.Safari" },
     { key = "e", label = "Zed",           app = "dev.zed.Zed" },
-    { key = "c", label = "Calendar",      app = "com.apple.iCal" },
+    { key = "k", label = "Calendar",      app = "com.apple.iCal" },
 
     { key = "a", label = "LLM Assistant", url = "https://kagi.com/assistant" },
 
