@@ -13,6 +13,7 @@
 local bind = require("bind")
 local utility = require("utility")
 local window = require("window")
+local dateinserter = require("dateinserter")
 
 --------------------------------------------------------------------------------
 -- Actions configuration
@@ -95,6 +96,18 @@ local actions = {
             { key = "a", label = "Copy app config snippet", fun = utility.copyAppConfigSnippet },
         }
     },
+
+    -- Dates
+    {
+        key = "d",
+        label = "Dates",
+        group = {
+            { key = "d", label = "Today",       fun = dateinserter.today },
+            { key = "y", label = "Yesterday",   fun = dateinserter.yesterday },
+            { key = "t", label = "Tomorrow",    fun = dateinserter.tomorrow },
+            { key = "m", label = "Next monday", fun = dateinserter.next_monday }
+        }
+    }
 }
 
 --------------------------------------------------------------------------------
