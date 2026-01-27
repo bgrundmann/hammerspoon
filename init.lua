@@ -50,9 +50,10 @@ local actions = {
         key = "f",
         label = "Finder",
         group = {
-            { key = "d", label = "Desktop",   folder = "/Users/bgrundmann/Desktop" },
-            { key = "l", label = "Downloads", folder = "/Users/bgrundmann/Downloads" },
-            { key = "m", label = "Magic",     folder = "/Users/bgrundmann/Magic" },
+            { key = "d", label = "Desktop",                  folder = "/Users/bgrundmann/Desktop" },
+            { key = "l", label = "Downloads",                folder = "/Users/bgrundmann/Downloads" },
+            { key = "m", label = "Magic",                    folder = "/Users/bgrundmann/Magic" },
+            { key = "b", label = "Buchhaltung Förderverein", folder = "/Users/bgrundmann/Programming/foerderverein/buchhaltung" },
         }
     },
 
