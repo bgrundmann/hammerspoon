@@ -44,4 +44,22 @@ function M.applyVerticalLayout()
         :show()
 end
 
+function M.leftSide(percent)
+    return function()
+        local win = hs.window.focusedWindow()
+        if not win then return end
+        local screen = win:screen():frame()
+        win:setFrame(hs.geometry.rect(screen.x, screen.y, screen.w * percent, screen.h))
+    end
+end
+
+function M.rightSide(percent)
+    return function()
+        local win = hs.window.focusedWindow()
+        if not win then return end
+        local screen = win:screen():frame()
+        win:setFrame(hs.geometry.rect(screen.x + screen.w * (1 - percent), screen.y, screen.w * percent, screen.h))
+    end
+end
+
 return M

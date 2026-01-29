@@ -107,7 +107,11 @@ local actions = {
             { key = "t", label = "Tomorrow",    fun = dateinserter.tomorrow },
             { key = "m", label = "Next monday", fun = dateinserter.next_monday }
         }
-    }
+    },
+
+    -- Direct window positioning
+    { key = "left",  label = "Window Left 60%",  fun = window.leftSide(0.6) },
+    { key = "right", label = "Window Right 40%", fun = window.rightSide(0.4) },
 }
 
 --------------------------------------------------------------------------------
