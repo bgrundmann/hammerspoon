@@ -43,6 +43,7 @@ local actions = {
         group = {
             { key = "n", label = "Notes",        command = "open -a obsidian -u 'obsidian://open?vault=Notes'" },
             { key = "b", label = "BeneUndDavid", command = "open -a obsidian -u 'obsidian://open?vault=BeneUndDavid'" },
+            { key = "t", label = "test-vault",   command = "open -a obsidian -u 'obsidian://open?vault=test-vault'" },
         }
     },
 
