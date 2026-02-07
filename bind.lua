@@ -26,8 +26,8 @@ local function createModal(groupItem)
     function modal:entered()
         -- Show hint window with available keys
         hint.show(groupItem)
-        -- Auto-exit after 2 seconds of inactivity
-        timer = hs.timer.doAfter(2, exitModal)
+        -- Auto-exit after 3 seconds of inactivity
+        timer = hs.timer.doAfter(3, exitModal)
     end
 
     function modal:exited()
