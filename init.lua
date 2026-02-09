@@ -8,7 +8,7 @@
 --   - Executes a direct action (e.g., launch an app)
 --   - Enters a modal for a chorded sequence (e.g., hyper+o then n for Obsidian Notes)
 --
--- Modals auto-exit after 2 seconds or on escape/action.
+-- Modals auto-exit after a time delay or on escape/action.
 
 local bind = require("bind")
 local utility = require("utility")
