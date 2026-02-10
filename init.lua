@@ -96,6 +96,7 @@ local actions = {
         label = "Utilities",
         group = {
             { key = "a", label = "Copy app config snippet", fun = utility.copyAppConfigSnippet },
+            { key = "d", label = "Due",                     app = "com.phocusllp.duemac" },
         }
     },
 
