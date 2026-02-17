@@ -14,6 +14,7 @@ local bind = require("bind")
 local utility = require("utility")
 local window = require("window")
 local dateinserter = require("dateinserter")
+local tickets = require("tickets")
 
 --------------------------------------------------------------------------------
 -- Actions configuration
@@ -97,6 +98,7 @@ local actions = {
         group = {
             { key = "a", label = "Copy app config snippet", fun = utility.copyAppConfigSnippet },
             { key = "d", label = "Due",                     app = "com.phocusllp.duemac" },
+            { key = "r", label = "Ticket report",           fun = tickets.showUpcomingTickets },
         }
     },
 
