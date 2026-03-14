@@ -115,6 +115,7 @@ local actions = {
     },
 
     -- Direct window positioning
+    { key = "up",    label = "Maximize",         fun = window.maximize },
     { key = "left",  label = "Window Left 60%",  fun = window.leftSide(0.6) },
     { key = "right", label = "Window Right 40%", fun = window.rightSide(0.4) },
 }
