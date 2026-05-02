@@ -58,6 +58,7 @@ local actions = {
             { key = "l", label = "Downloads",                folder = "/Users/bgrundmann/Downloads" },
             { key = "m", label = "Magic",                    folder = "/Users/bgrundmann/Magic" },
             { key = "b", label = "Buchhaltung Förderverein", folder = "/Users/bgrundmann/Programming/foerderverein/buchhaltung" },
+            { key = "s", label = "Stützwand",                folder = "/Users/bgrundmann/Desktop/Notes/Notes/Life/Haus/Stützwand" }
         }
     },
 
@@ -78,7 +79,8 @@ local actions = {
         label = "Window management",
         group = {
             { key = "v", label = "Vertical split", fun = window.applyVerticalLayout },
-            { key = "m", label = "Maximize",       fun = window.maximize }
+            { key = "m", label = "Maximize",       fun = window.maximize },
+            { key = "s", label = "Size window",    fun = window.sizeWindow }
         }
     },
 

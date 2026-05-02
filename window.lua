@@ -62,4 +62,21 @@ function M.rightSide(percent)
     end
 end
 
+function M.sizeWindow()
+    local btn, text = hs.dialog.textPrompt("Size window", "Enter <width> <height>", "", "OK", "Cancel")
+    if btn ~= "OK" then return end
+    local w, h = text:match("^%s*(%d+)%s+(%d+)%s*$")
+    if not w then
+        hs.alert.show("Invalid size: " .. text)
+        return
+    end
+    local win = hs.window.focusedWindow()
+    if not win then return end
+    local f = win:frame()
+    local screen = win:screen():frame()
+    local newW = math.min(tonumber(w), screen.w)
+    local newH = math.min(tonumber(h), screen.h)
+    win:setFrame(hs.geometry.rect(f.x, f.y, newW, newH))
+end
+
 return M
